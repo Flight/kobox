@@ -1,4 +1,4 @@
-# MC [![Build Status](https://travis-ci.org/Flight/mc.svg?branch=master)](https://travis-ci.org/Flight/mc)
+# KOBOX
 
 ## Quick start for developers
 Project uses node + Gulp for fast developing.
@@ -6,28 +6,32 @@ Project uses node + Gulp for fast developing.
 To install node: https://nodejs.org/en/
 
 Then open your favorite Terminal and run these commands.
-
-```sh
-$ npm install --global gulp-cli
-$ npm install
+```
+npm install --global gulp-cli
+npm install
 ```
 
-To watch everything (js + scss):
-```sh
-$ gulp watch
-```
+### To watch everything (html + scss + assets + js):
+`
+gulp watch
+`
 
-To run code linting (js + scss):
-```sh
-$ gulp
-```
+### To compile everything:
+`
+gulp
+`
 
-To compile scss:
-```sh
-$ gulp scss
-```
+### To compile scss:
+`
+gulp scss
+`
 
-To run webserver with livereload:
-```sh
-$ gulp webserver
-```
+### To run webserver with livereload:
+`
+gulp webserver
+`
+
+### To push changes to github pages
+`
+git subtree push --prefix dist origin gh-pages
+`
