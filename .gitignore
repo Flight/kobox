@@ -1,0 +1,5 @@
+files/
+tmp
+.DS_Store
+node_modules/
+*.sublime*
