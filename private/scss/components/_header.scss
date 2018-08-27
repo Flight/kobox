@@ -1,2 +1,43 @@
 .header {
+    overflow: hidden;
+    min-height: 135px;
+
+    &__logo {
+        position: absolute;
+        top: 23px;
+        left: 50%;
+        margin-left: -52px;
+    }
+}
+.header-nav {
+    margin: 62px 0 0;
+
+    &__list {
+        font-size: 13px;
+        text-transform: uppercase;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    &__item {
+        margin: 0 25px;
+        list-style-type: none;
+
+        &_left {
+            margin: 0 50px 0 0;
+            float: left;
+        }
+        &_right {
+            margin: 0 0 0 50px;
+            float: right;
+        }
+        &.active {
+            font-weight: bold;
+        }
+    }
+    &__link {
+        &, &:hover {
+            color: #000;
+        }
+    }
 }

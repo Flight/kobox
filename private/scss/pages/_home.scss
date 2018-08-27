@@ -1,0 +1,39 @@
+.main-page-blocks {
+    &__block {
+        display: table;
+        float: left;
+        width: calc(50% - 5px);
+        margin: 5px 0;
+        height: 445px;
+        text-align: center;
+
+        &:nth-child(2n) {
+            margin-left: 10px;
+        }
+
+        &_black {
+            background: #000;
+            &, a {
+                color: #f2f2f2;
+            }
+        }
+        &_white {
+        }
+    }
+
+    &__content {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 1.2;
+
+        p {
+            margin: 13px 0;
+        }
+    }
+
+    &__title {
+        font-family: $font-family-alt;
+        font-size: $font-size-title;
+        margin: 0 0 42px;
+    }
+}
