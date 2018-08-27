@@ -1,5 +1,8 @@
 # KOBOX
 
+## Link to test
+[KOBOX](https://flight.github.io/kobox/)
+
 ## Quick start for developers
 Project uses node + Gulp for fast developing.
 
