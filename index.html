@@ -13,7 +13,9 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header clearfix">
+            <input type="checkbox" name="mobile-menu" id="mobile-menu" class="header__mobile-menu-checkbox">
+            <label for="mobile-menu" class="header__mobile-menu-button" onlick></label>
             <nav class="header-nav">
                 <ul class="header-nav__list">
                     <li class="header-nav__item header-nav__item_left">
@@ -46,7 +48,7 @@
             <a href="#" class="header__logo"><img src="assets/img/logo.png" alt="KOBOX" width="102" height="102"></a>
         </header>
 
-        <div class="main-container">
+        <div class="main-container clearfix">
             <div class="main-page-blocks">
                 <div class="main-page-blocks__row">
                     <div class="main-page-blocks__block main-page-blocks__block_black main-page-blocks__block_text">
@@ -86,7 +88,7 @@
             </div>
         </div>
 
-        <footer class="footer">
+        <footer class="footer clearfix">
             <div class="footer__copyright">
                 Design by The Digital Fairy
             </div>

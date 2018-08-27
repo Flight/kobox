@@ -1,5 +1,4 @@
 .footer {
-    overflow: hidden;
     padding: 8px 0 20px;
 
     &__copyright, &__powered {
@@ -32,8 +31,25 @@
 @media (max-width: 979px) {
     .footer-nav {
         &__item {
-            display: inline;
             margin: 0 2px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        display: flex;
+        flex-direction: column-reverse;
+
+        &__copyright, &__powered {
+            text-align: center;
+            float: none;
+        }
+    }
+    .footer-nav {
+        &__item {
+            display: block;
+            margin: 10px 0;
         }
     }
 }

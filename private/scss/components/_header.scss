@@ -1,7 +1,10 @@
 .header {
     position: relative;
-    overflow: hidden;
     min-height: 135px;
+
+    &__mobile-menu-checkbox, &__mobile-menu-button {
+        display: none;
+    }
 
     &__logo {
         position: absolute;
@@ -59,11 +62,66 @@
 
 @media (max-width: 767px) {
     .header {
+        min-height: 126px;
+
         &__logo {
+            top: 15px;
             margin-left: -33px;
+
             img {
                 width: 65px;
                 height: 65px;
+            }
+        }
+
+        &__mobile-menu-button {
+            display: block;
+            position: absolute;
+            top: 32px;
+            right: 0;
+            z-index: 2;
+
+            &::before {
+                display: block;
+                content: '\2261';
+                font-size: 50px;
+            }
+        }
+
+        #mobile-menu:checked {
+            ~ .header-nav {
+                display: block !important;
+            }
+            ~ .header__mobile-menu-button{
+                position: fixed;
+                top: 35px;
+                right: 25px;
+                &::before {
+                    content: '\00d7';
+                    font-size: 30px;
+                    font-family: "Lucida Console", sans-serif;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .header-nav {
+        display: none;
+        background-color: #fff;
+        margin: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+
+        &__item {
+            &_left, &_right {
+                margin: 20px 0;
+                float: none;
             }
         }
     }
