@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i");
 .header {
+  position: relative;
   overflow: hidden;
   min-height: 135px;
 }
@@ -89,7 +90,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1185px;
+  width: 1185px;
   margin: 0 auto;
 }
 
