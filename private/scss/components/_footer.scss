@@ -28,3 +28,12 @@
         color: #000;
     }
 }
+
+@media (max-width: 1024px) {
+    .footer-nav {
+        &__item {
+            display: inline;
+            margin: 0 2px;
+        }
+    }
+}

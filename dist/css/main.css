@@ -44,6 +44,20 @@
   color: #000;
 }
 
+@media (max-width: 1024px) {
+  .header-nav__item {
+    margin: 0 10px;
+  }
+  .header-nav__item_left {
+    margin: 0 20px 0 0;
+    float: left;
+  }
+  .header-nav__item_right {
+    margin: 0 0 0 20px;
+    float: right;
+  }
+}
+
 .footer {
   overflow: hidden;
   padding: 8px 0 20px;
@@ -78,21 +92,41 @@
   color: #000;
 }
 
-.main-page-blocks {
-  overflow: hidden;
+@media (max-width: 1024px) {
+  .footer-nav__item {
+    display: inline;
+    margin: 0 2px;
+  }
+}
+
+.main-page-blocks__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
 }
 
 .main-page-blocks__block {
-  display: table;
-  float: left;
+  position: relative;
   width: calc(50% - 5px);
   margin: 5px 0;
-  height: 445px;
   text-align: center;
-}
-
-.main-page-blocks__block:nth-child(2n) {
-  margin-left: 10px;
 }
 
 .main-page-blocks__block_black {
@@ -104,9 +138,12 @@
 }
 
 .main-page-blocks__content {
-  display: table-cell;
-  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   line-height: 1.2;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 
 .main-page-blocks__content p {
@@ -117,6 +154,14 @@
   font-family: "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 18px;
   margin: 0 0 42px;
+}
+
+@media (max-width: 767px) {
+  .main-page-blocks__block {
+    position: relative;
+    width: 100%;
+    height: 250px;
+  }
 }
 
 body {
@@ -132,8 +177,9 @@ li {
 }
 
 .wrapper {
-  width: 1185px;
+  max-width: 1185px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /*# sourceMappingURL=maps/main.css.map */
