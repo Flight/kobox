@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i");
 .header {
   position: relative;
-  overflow: hidden;
   min-height: 135px;
+}
+
+.header__mobile-menu-checkbox, .header__mobile-menu-button {
+  display: none;
 }
 
 .header__logo {
@@ -59,17 +62,62 @@
 }
 
 @media (max-width: 767px) {
+  .header {
+    min-height: 126px;
+  }
   .header__logo {
+    top: 15px;
     margin-left: -33px;
   }
   .header__logo img {
     width: 65px;
     height: 65px;
   }
+  .header__mobile-menu-button {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    z-index: 2;
+  }
+  .header__mobile-menu-button::before {
+    display: block;
+    content: '\2261';
+    font-size: 50px;
+  }
+  .header #mobile-menu:checked ~ .header-nav {
+    display: block !important;
+  }
+  .header #mobile-menu:checked ~ .header__mobile-menu-button {
+    position: fixed;
+    top: 35px;
+    right: 25px;
+  }
+  .header #mobile-menu:checked ~ .header__mobile-menu-button::before {
+    content: '\00d7';
+    font-size: 30px;
+    font-family: "Lucida Console", sans-serif;
+    position: relative;
+  }
+  .header-nav {
+    display: none;
+    background-color: #fff;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+  }
+  .header-nav__item_left, .header-nav__item_right {
+    margin: 20px 0;
+    float: none;
+  }
 }
 
 .footer {
-  overflow: hidden;
   padding: 8px 0 20px;
 }
 
@@ -104,8 +152,27 @@
 
 @media (max-width: 979px) {
   .footer-nav__item {
-    display: inline;
     margin: 0 2px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .footer__copyright, .footer__powered {
+    text-align: center;
+    float: none;
+  }
+  .footer-nav__item {
+    display: block;
+    margin: 10px 0;
   }
 }
 
