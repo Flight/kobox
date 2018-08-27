@@ -40,7 +40,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 979px) {
     .header-nav {
         &__item {
             margin: 0 10px;
@@ -52,6 +52,18 @@
             &_right {
                 margin: 0 0 0 20px;
                 float: right;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__logo {
+            margin-left: -33px;
+            img {
+                width: 65px;
+                height: 65px;
             }
         }
     }

@@ -14,7 +14,14 @@ li {
 }
 
 .wrapper {
+    min-width: 320px;
     max-width: 1185px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        padding: 0;
+    }
 }
