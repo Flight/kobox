@@ -1,3 +1,30 @@
 .footer {
+    overflow: hidden;
+    padding: 8px 0 20px;
 
+    &__copyright, &__powered {
+        font-size: 9px;
+        margin: 3px 0 0;
+    }
+
+    &__copyright {
+        float: left;
+    }
+    &__powered {
+        float: right;
+    }
+}
+.footer-nav {
+    text-align: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+
+    &__item {
+        display: inline;
+        margin: 0 7px;
+    }
+    &__link {
+        color: #000;
+    }
 }

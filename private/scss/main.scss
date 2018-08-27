@@ -3,8 +3,16 @@
 
 body {
     font: normal normal normal $font-size-text $font-family-default;
-    min-height: 100000px;
 }
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
 .wrapper {
     width: 1185px;
     margin: 0 auto;

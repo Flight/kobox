@@ -1,4 +1,6 @@
 .main-page-blocks {
+    overflow: hidden;
+
     &__block {
         display: table;
         float: left;
